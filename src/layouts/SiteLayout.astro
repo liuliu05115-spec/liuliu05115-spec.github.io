@@ -1,0 +1,83 @@
+---
+import "../styles/global.css";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+
+const {
+  title = "Jian Liu | Academic Website",
+  description = "Academic website of Jian Liu, featuring research interests, publications, projects, and academic experience.",
+  activePath = "/",
+} = Astro.props;
+
+const canonical = Astro.site ? new URL(Astro.url.pathname, Astro.site).toString() : undefined;
+---
+<!doctype html>
+<html lang="en" data-language="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f8fa" />
+    <meta name="description" content={description} />
+    <meta name="author" content="Jian Liu" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    {canonical && <link rel="canonical" href={canonical} />}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <SiteHeader activePath={activePath} />
+    <main>
+      <slot />
+    </main>
+    <SiteFooter />
+
+    <script>
+      const storageKey = "jian-liu-site-language";
+      const toggle = document.querySelector("[data-language-toggle]");
+
+      function applyLanguage(language) {
+        const selected = language === "zh" ? "zh" : "en";
+        document.documentElement.dataset.language = selected;
+        document.documentElement.lang = selected === "zh" ? "zh-CN" : "en";
+
+        document.querySelectorAll("[data-en][data-zh]").forEach((element) => {
+          const value = element.getAttribute(`data-${selected}`);
+          if (value !== null) element.textContent = value;
+        });
+
+        document.querySelectorAll("[data-language-label]").forEach((element) => {
+          element.textContent = selected === "zh" ? "EN" : "中文";
+        });
+
+        if (toggle) {
+          toggle.setAttribute("aria-label", selected === "zh" ? "Switch to English" : "切换到中文");
+          toggle.innerHTML = selected === "zh"
+            ? '<span class="language-label is-current">中文</span><span class="language-divider">/</span><span class="language-label">EN</span>'
+            : '<span class="language-label">中文</span><span class="language-divider">/</span><span class="language-label is-current">EN</span>';
+        }
+
+        try {
+          localStorage.setItem(storageKey, selected);
+        } catch (_) {}
+      }
+
+      if (toggle) {
+        toggle.addEventListener("click", () => {
+          const current = document.documentElement.dataset.language || "en";
+          applyLanguage(current === "en" ? "zh" : "en");
+        });
+      }
+
+      let savedLanguage = "en";
+      try {
+        savedLanguage = localStorage.getItem(storageKey) || "en";
+      } catch (_) {}
+      applyLanguage(savedLanguage);
+    </script>
+  </body>
+</html>

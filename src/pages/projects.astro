@@ -1,0 +1,86 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+const projects = [
+  {
+    number: "01",
+    category: "AI FOR SCIENCE",
+    title: "State2Combo",
+    subtitle: "Disease-state-guided therapeutic hypothesis generation",
+    description: "A research prototype exploring how disease-state characterization can guide mechanism interpretation, perturbation matching, candidate ranking, and evidence retrieval.",
+    zhTitle: "State2Combo",
+    zhSubtitle: "疾病状态引导的治疗假设生成",
+    zhDescription: "一个科研原型，探索如何通过疾病状态刻画，连接机制解释、扰动匹配、候选排序与证据检索。",
+    tags: ["Scientific Agents", "Therapeutic Design", "Evidence Retrieval"],
+    status: "Prototype",
+    zhStatus: "原型阶段",
+  },
+  {
+    number: "02",
+    category: "SCIENTIFIC SOFTWARE",
+    title: "GUI vs. Structured Interfaces Benchmark",
+    subtitle: "Understanding when GUI matters for scientific work",
+    description: "A controlled benchmark study comparing graphical interaction with structured interfaces across scientific software tasks, including Cytoscape, PyMOL, and ImageJ.",
+    zhTitle: "GUI 与结构化接口基准研究",
+    zhSubtitle: "理解 GUI 在科研任务中的必要性",
+    zhDescription: "通过受控基准任务，对比图形交互与结构化接口在科研软件工作流中的表现，涉及 Cytoscape、PyMOL 与 ImageJ。",
+    tags: ["GUI", "MCP", "Benchmarking", "Scientific Software"],
+    status: "Ongoing",
+    zhStatus: "进行中",
+  },
+  {
+    number: "03",
+    category: "DIGITAL PATHOLOGY",
+    title: "Morpho-Molecular Decoupling",
+    subtitle: "Connecting tissue morphology with molecular programs",
+    description: "An ongoing computational pathology project investigating how stromal abundance and molecular state relate to histological morphology in colorectal cancer.",
+    zhTitle: "形态–分子解耦",
+    zhSubtitle: "连接组织形态与分子程序",
+    zhDescription: "一项进行中的计算病理研究，探索结直肠癌中基质丰度、分子状态与组织学形态之间的关系。",
+    tags: ["Digital Pathology", "Colorectal Cancer", "Transcriptomics"],
+    status: "Ongoing",
+    zhStatus: "进行中",
+  },
+  {
+    number: "04",
+    category: "COMPUTATIONAL ONCOLOGY",
+    title: "Silibinin and Stromal Transcriptional Programs",
+    subtitle: "An integrative bioinformatics study in colorectal cancer",
+    description: "An undergraduate research project integrating bulk transcriptomics, single-cell evidence, and an AOM/DSS mouse model to investigate stromal-associated transcriptional programs.",
+    zhTitle: "水飞蓟宾与肿瘤间质转录程序",
+    zhSubtitle: "结直肠癌整合生物信息学研究",
+    zhDescription: "本科科研项目，整合 bulk 转录组、单细胞证据与 AOM/DSS 小鼠模型，研究肿瘤相关间质转录程序。",
+    tags: ["Bioinformatics", "Single-cell Analysis", "Transcriptomics"],
+    status: "Completed",
+    zhStatus: "已完成",
+  },
+];
+---
+<SiteLayout title="Projects | Jian Liu" description="Selected research and technical projects by Jian Liu." activePath="/projects">
+  <section class="page-hero">
+    <div class="container">
+      <p class="section-kicker">PROJECTS / 03</p>
+      <h1 data-en="Selected projects" data-zh="代表性项目">Selected projects</h1>
+      <p class="page-lead" data-en="A selection of research prototypes and ongoing work spanning scientific AI, software evaluation, computational biology, and digital pathology." data-zh="展示科学人工智能、科研软件评测、计算生物学与数字病理方向的研究原型及持续工作。">A selection of research prototypes and ongoing work spanning scientific AI, software evaluation, computational biology, and digital pathology.</p>
+    </div>
+  </section>
+
+  <section class="section-block page-content">
+    <div class="container project-list">
+      {projects.map((project) => (
+        <article class="project-row">
+          <div class="project-index">{project.number}</div>
+          <div class="project-main">
+            <div class="project-meta">
+              <span class="section-kicker">{project.category}</span>
+              <span class="project-status" data-en={project.status} data-zh={project.zhStatus}>{project.status}</span>
+            </div>
+            <h2 data-en={project.title} data-zh={project.zhTitle}>{project.title}</h2>
+            <p class="project-subtitle" data-en={project.subtitle} data-zh={project.zhSubtitle}>{project.subtitle}</p>
+            <p class="project-description" data-en={project.description} data-zh={project.zhDescription}>{project.description}</p>
+            <div class="tag-row">{project.tags.map((tag) => <span>{tag}</span>)}</div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+</SiteLayout>

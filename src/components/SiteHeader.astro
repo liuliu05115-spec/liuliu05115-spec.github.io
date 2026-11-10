@@ -1,0 +1,40 @@
+---
+const { activePath = "/" } = Astro.props;
+
+const links = [
+  { href: "/", en: "Home", zh: "首页" },
+  { href: "/research", en: "Research", zh: "研究方向" },
+  { href: "/publications", en: "Publications", zh: "论文发表" },
+  { href: "/projects", en: "Projects", zh: "科研项目" },
+  { href: "/cv", en: "CV", zh: "简历" },
+  { href: "/contact", en: "Contact", zh: "联系" },
+];
+---
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href="/" aria-label="Jian Liu home">
+      <span class="wordmark-mark">JL</span>
+      <span class="wordmark-name">Jian Liu</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      {links.map((link) => (
+        <a
+          href={link.href}
+          class:list={["nav-link", { "is-active": activePath === link.href }]}
+          aria-current={activePath === link.href ? "page" : undefined}
+          data-en={link.en}
+          data-zh={link.zh}
+        >
+          {link.en}
+        </a>
+      ))}
+    </nav>
+
+    <button class="language-toggle" type="button" data-language-toggle aria-label="Switch language">
+      <span class="language-label">中文</span>
+      <span class="language-divider">/</span>
+      <span class="language-label is-current">EN</span>
+    </button>
+  </div>
+</header>

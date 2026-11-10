@@ -1,0 +1,126 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+---
+<SiteLayout
+  title="Jian Liu | Academic Website"
+  description="Jian Liu is a bioinformatics researcher interested in AI for Science, scientific agents, computational biology, and digital pathology."
+  activePath="/"
+>
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span><span data-en="ACADEMIC · RESEARCH · AI FOR SCIENCE" data-zh="学术研究 · 科学智能 · 生物信息学">ACADEMIC · RESEARCH · AI FOR SCIENCE</span></p>
+        <h1>Jian Liu<span class="name-period">.</span></h1>
+        <p class="hero-role" data-en="Bioinformatics Researcher" data-zh="生物信息学研究者">Bioinformatics Researcher</p>
+        <p class="hero-intro" data-en="I am interested in building reliable AI systems for scientific work and applying computational approaches to understand complex biological systems." data-zh="我关注面向科研工作的可靠人工智能系统，并运用计算方法理解复杂生物学系统。">
+          I am interested in building reliable AI systems for scientific work and applying computational approaches to understand complex biological systems.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="/research"><span data-en="Explore my research" data-zh="了解研究方向">Explore my research</span><span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="/publications"><span data-en="View publications" data-zh="查看论文发表">View publications</span><span aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-meta">
+          <span class="meta-dot"></span>
+          <span data-en="Harbin Institute of Technology · Bioinformatics" data-zh="哈尔滨工业大学 · 生物信息学">Harbin Institute of Technology · Bioinformatics</span>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-label="JL monogram illustration">
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+        <div class="art-orbit orbit-three"></div>
+        <div class="art-core">
+          <span class="art-initials">JL</span>
+          <span class="art-caption">RESEARCH<br />IN PROGRESS</span>
+        </div>
+        <span class="art-node node-one"></span>
+        <span class="art-node node-two"></span>
+        <span class="art-node node-three"></span>
+        <span class="art-coordinate">45°45′N<br />126°38′E</span>
+        <span class="art-index">01 / 06</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block intro-strip">
+    <div class="container intro-grid">
+      <div>
+        <p class="section-kicker">01 / ABOUT</p>
+        <h2 data-en="Research at the intersection of biology and intelligent systems." data-zh="探索生物学与智能系统的交叉领域。">Research at the intersection of biology and intelligent systems.</h2>
+      </div>
+      <div class="intro-text">
+        <p data-en="My background is in bioinformatics. I am especially interested in how AI agents can interact with scientific software, how their work can be evaluated rigorously, and how computational methods can generate useful biological insights." data-zh="我的学术背景是生物信息学。我尤其关注 AI 智能体如何与科研软件交互、如何对其工作进行严谨评估，以及计算方法如何产生有价值的生物学见解。">
+          My background is in bioinformatics. I am especially interested in how AI agents can interact with scientific software, how their work can be evaluated rigorously, and how computational methods can generate useful biological insights.
+        </p>
+        <a class="arrow-link" href="/cv"><span data-en="More about me" data-zh="了解更多个人经历">More about me</span><span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">02 / RESEARCH FOCUS</p>
+          <h2 data-en="What I work on" data-zh="研究兴趣">What I work on</h2>
+        </div>
+        <a class="arrow-link" href="/research"><span data-en="All research areas" data-zh="全部研究方向">All research areas</span><span aria-hidden="true">↗</span></a>
+      </div>
+
+      <div class="focus-grid">
+        <article class="focus-card">
+          <span class="card-number">01</span>
+          <div class="focus-icon icon-orbit">◎</div>
+          <h3 data-en="AI for Science" data-zh="科学人工智能">AI for Science</h3>
+          <p data-en="Scientific agents, tool use, and reliable multi-step research workflows." data-zh="科学智能体、工具调用与可靠的多步骤科研工作流。">Scientific agents, tool use, and reliable multi-step research workflows.</p>
+          <a href="/research#ai-for-science" aria-label="AI for Science research">↗</a>
+        </article>
+        <article class="focus-card">
+          <span class="card-number">02</span>
+          <div class="focus-icon icon-grid">▦</div>
+          <h3 data-en="Scientific Software" data-zh="科研软件与基准评测">Scientific Software</h3>
+          <p data-en="Benchmarking GUI, MCP, and other interfaces for scientific applications." data-zh="评估 GUI、MCP 等交互方式在科研软件中的能力与边界。">Benchmarking GUI, MCP, and other interfaces for scientific applications.</p>
+          <a href="/research#scientific-software" aria-label="Scientific software research">↗</a>
+        </article>
+        <article class="focus-card">
+          <span class="card-number">03</span>
+          <div class="focus-icon icon-cell">◌</div>
+          <h3 data-en="Computational Biology" data-zh="计算生物学">Computational Biology</h3>
+          <p data-en="Computational oncology, single-cell analysis, and digital pathology." data-zh="计算肿瘤学、单细胞分析与数字病理。">Computational oncology, single-cell analysis, and digital pathology.</p>
+          <a href="/research#computational-biology" aria-label="Computational biology research">↗</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-block publication-preview">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">03 / SELECTED PUBLICATION</p>
+          <h2 data-en="Selected publication" data-zh="代表性论文">Selected publication</h2>
+        </div>
+        <a class="arrow-link" href="/publications"><span data-en="Publication list" data-zh="论文列表">Publication list</span><span aria-hidden="true">↗</span></a>
+      </div>
+      <article class="publication-feature">
+        <div class="publication-year">2026</div>
+        <div class="publication-details">
+          <span class="status-pill" data-en="ACCEPTED · NARRATIVE REVIEW" data-zh="已接收 · 叙述性综述">ACCEPTED · NARRATIVE REVIEW</span>
+          <h3>Obesity-Driven Early-Onset Colorectal Cancer: Mechanistic Insights and Emerging Clinical Implications</h3>
+          <p class="journal-name"><em>International Journal of Cancer</em></p>
+          <p class="publication-note" data-en="Accepted in May 2026. Full citation details will be added after final bibliographic verification." data-zh="于 2026 年 5 月接收。完整引文信息将在最终核对后补充。">Accepted in May 2026. Full citation details will be added after final bibliographic verification.</p>
+        </div>
+        <span class="publication-arrow" aria-hidden="true">↗</span>
+      </article>
+    </div>
+  </section>
+
+  <section class="closing-section">
+    <div class="container closing-inner">
+      <p class="section-kicker">04 / GET IN TOUCH</p>
+      <h2 data-en="Interested in research collaboration?" data-zh="期待科研交流与合作。">Interested in research collaboration?</h2>
+      <p data-en="I welcome conversations about scientific AI, computational biology, and research opportunities." data-zh="欢迎就科学人工智能、计算生物学及科研机会进行交流。">I welcome conversations about scientific AI, computational biology, and research opportunities.</p>
+      <a class="button button-light" href="/contact"><span data-en="Contact me" data-zh="联系我">Contact me</span><span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+</SiteLayout>
