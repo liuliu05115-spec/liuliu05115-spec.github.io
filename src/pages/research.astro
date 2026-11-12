@@ -1,12 +1,12 @@
 ---
 import SiteLayout from "../layouts/SiteLayout.astro";
 ---
-<SiteLayout title="Research | Jian Liu" description="Research interests of Jian Liu." activePath="/research">
+<SiteLayout title="Research | Jian Liu" description="Research interests of Jian Liu across AI for Science, scientific software, and computational biology." activePath="/research">
   <section class="page-hero">
     <div class="container">
       <p class="section-kicker">RESEARCH / 01</p>
       <h1 data-en="Research interests" data-zh="研究方向">Research interests</h1>
-      <p class="page-lead" data-en="I work across computational biology and AI for Science, with an emphasis on reliable methods, reproducible evaluation, and meaningful scientific applications." data-zh="我的研究兴趣横跨计算生物学与科学人工智能，重点关注可靠的方法、可复现的评估，以及有实际意义的科学应用。">I work across computational biology and AI for Science, with an emphasis on reliable methods, reproducible evaluation, and meaningful scientific applications.</p>
+      <p class="page-lead" data-en="My work connects biological questions with intelligent computational systems. I am particularly interested in reliable scientific agents, rigorous evaluation of scientific-software interaction, and computational approaches to cancer biology." data-zh="我的研究尝试将生物学问题与智能计算系统连接起来，重点关注可靠的科学智能体、科研软件交互的严谨评估，以及肿瘤生物学的计算研究。">My work connects biological questions with intelligent computational systems. I am particularly interested in reliable scientific agents, rigorous evaluation of scientific-software interaction, and computational approaches to cancer biology.</p>
     </div>
   </section>
 
@@ -16,9 +16,10 @@ import SiteLayout from "../layouts/SiteLayout.astro";
         <div class="research-index">01</div>
         <div class="research-body">
           <p class="section-kicker">AI FOR SCIENCE</p>
-          <h2 data-en="Scientific agents and intelligent research workflows" data-zh="科学智能体与智能科研工作流">Scientific agents and intelligent research workflows</h2>
-          <p data-en="Exploring how AI agents can plan and execute scientific tasks, use domain-specific tools, retrieve evidence, and communicate uncertainty. A central question is how to make agentic research workflows useful, inspectable, and dependable." data-zh="探索 AI 智能体如何规划并执行科学任务、使用领域工具、检索证据并表达不确定性。核心问题是如何让智能科研工作流真正有用、可检查且值得信赖。">Exploring how AI agents can plan and execute scientific tasks, use domain-specific tools, retrieve evidence, and communicate uncertainty. A central question is how to make agentic research workflows useful, inspectable, and dependable.</p>
-          <div class="tag-row"><span>AI Agents</span><span>Tool Use</span><span>Evidence-grounded Reasoning</span></div>
+          <h2 data-en="Scientific agents and evidence-grounded research workflows" data-zh="科学智能体与基于证据的科研工作流">Scientific agents and evidence-grounded research workflows</h2>
+          <p data-en="I explore how AI agents can translate scientific questions into executable workflows: identifying a disease state, interpreting mechanisms, selecting domain-specific tools, retrieving supporting evidence, and communicating uncertainty. An important design principle is to make each stage inspectable and to distinguish hypothesis generation from experimental validation." data-zh="我关注 AI 智能体如何将科学问题转化为可执行工作流，包括识别疾病状态、解释作用机制、选择领域工具、检索支持证据并表达不确定性。一个重要原则是让每个环节都可检查，并明确区分假设生成与实验验证。">I explore how AI agents can translate scientific questions into executable workflows: identifying a disease state, interpreting mechanisms, selecting domain-specific tools, retrieving supporting evidence, and communicating uncertainty. An important design principle is to make each stage inspectable and to distinguish hypothesis generation from experimental validation.</p>
+          <div class="tag-row"><span>AI Agents</span><span>AI for Science</span><span>Evidence Retrieval</span><span>Reliability</span></div>
+          <a class="arrow-link research-project-link" href="/projects#state2combo"><span data-en="Related project: State2Combo" data-zh="相关项目：State2Combo">Related project: State2Combo</span><span aria-hidden="true">↗</span></a>
         </div>
       </article>
 
@@ -26,19 +27,21 @@ import SiteLayout from "../layouts/SiteLayout.astro";
         <div class="research-index">02</div>
         <div class="research-body">
           <p class="section-kicker">SCIENTIFIC SOFTWARE & BENCHMARKING</p>
-          <h2 data-en="Evaluating interfaces for scientific software" data-zh="科研软件交互方式与基准评测">Evaluating interfaces for scientific software</h2>
-          <p data-en="Studying when graphical user interfaces are necessary, when structured interfaces are sufficient, and how hybrid GUI–API workflows should be evaluated across real scientific applications." data-zh="研究图形用户界面在何种任务中不可替代、结构化接口在何种情况下足够，以及如何在真实科研软件中评估 GUI 与 API 的混合工作流。">Studying when graphical user interfaces are necessary, when structured interfaces are sufficient, and how hybrid GUI–API workflows should be evaluated across real scientific applications.</p>
-          <div class="tag-row"><span>GUI</span><span>MCP</span><span>Benchmark Design</span><span>Reproducibility</span></div>
+          <h2 data-en="When does GUI matter for scientific work?" data-zh="GUI 在科研工作中何时不可替代？">When does GUI matter for scientific work?</h2>
+          <p data-en="I study the capabilities and limits of GUI-based interaction, MCP and other structured interfaces, and hybrid workflows in real scientific applications. The goal is to build task-grounded benchmarks that compare interfaces under matched evaluators and budgets, identify tasks that require visual or spatial interaction, and clarify where structured tools are more reliable." data-zh="我研究 GUI 交互、MCP 等结构化接口及混合工作流在真实科研软件中的能力与边界。目标是构建以实际任务为基础的基准，在统一评价器和资源预算下比较不同接口，识别需要视觉或空间交互的任务，并明确结构化工具在哪些场景下更加可靠。">I study the capabilities and limits of GUI-based interaction, MCP and other structured interfaces, and hybrid workflows in real scientific applications. The goal is to build task-grounded benchmarks that compare interfaces under matched evaluators and budgets, identify tasks that require visual or spatial interaction, and clarify where structured tools are more reliable.</p>
+          <div class="tag-row"><span>GUI</span><span>MCP</span><span>Scientific Software</span><span>Benchmark Design</span><span>Reproducibility</span></div>
+          <a class="arrow-link research-project-link" href="/projects#gui-benchmark"><span data-en="Related project: GUI vs. Structured Interfaces" data-zh="相关项目：GUI 与结构化接口基准研究">Related project: GUI vs. Structured Interfaces</span><span aria-hidden="true">↗</span></a>
         </div>
       </article>
 
       <article class="research-item" id="computational-biology">
         <div class="research-index">03</div>
         <div class="research-body">
-          <p class="section-kicker">COMPUTATIONAL BIOLOGY</p>
-          <h2 data-en="Computational oncology and digital pathology" data-zh="计算肿瘤学与数字病理">Computational oncology and digital pathology</h2>
-          <p data-en="Applying bioinformatics, transcriptomic analysis, single-cell methods, and computational pathology to investigate tumor biology and the relationship between tissue morphology and molecular programs." data-zh="运用生物信息学、转录组分析、单细胞方法与计算病理学，研究肿瘤生物学，以及组织形态与分子程序之间的联系。">Applying bioinformatics, transcriptomic analysis, single-cell methods, and computational pathology to investigate tumor biology and the relationship between tissue morphology and molecular programs.</p>
-          <div class="tag-row"><span>Bioinformatics</span><span>Single-cell Analysis</span><span>Digital Pathology</span><span>CRC</span></div>
+          <p class="section-kicker">COMPUTATIONAL BIOLOGY & DIGITAL PATHOLOGY</p>
+          <h2 data-en="Computational oncology and morphology–molecular relationships" data-zh="计算肿瘤学与形态–分子关系">Computational oncology and morphology–molecular relationships</h2>
+          <p data-en="My bioinformatics work uses transcriptomic cohorts, single-cell data, and experimental-model evidence to study tumor-associated programs. Current interests include stromal biology in colorectal cancer and whether tissue-level morphology captures, or fails to capture, underlying molecular states. I aim to connect computational observations with clearly defined biological questions and appropriately scoped validation." data-zh="我的生物信息学研究利用转录组队列、单细胞数据和实验模型证据分析肿瘤相关生物学程序。当前兴趣包括结直肠癌间质生物学，以及组织形态能否反映其背后的分子状态。我希望将计算观察与明确的生物学问题和适当范围的验证联系起来。">My bioinformatics work uses transcriptomic cohorts, single-cell data, and experimental-model evidence to study tumor-associated programs. Current interests include stromal biology in colorectal cancer and whether tissue-level morphology captures, or fails to capture, underlying molecular states. I aim to connect computational observations with clearly defined biological questions and appropriately scoped validation.</p>
+          <div class="tag-row"><span>Bioinformatics</span><span>Computational Oncology</span><span>Single-cell Analysis</span><span>Digital Pathology</span><span>Colorectal Cancer</span></div>
+          <a class="arrow-link research-project-link" href="/projects#morpho-molecular"><span data-en="Related project: Morpho-Molecular Decoupling" data-zh="相关项目：形态–分子解耦">Related project: Morpho-Molecular Decoupling</span><span aria-hidden="true">↗</span></a>
         </div>
       </article>
     </div>
@@ -48,7 +51,7 @@ import SiteLayout from "../layouts/SiteLayout.astro";
     <div class="container closing-inner">
       <p class="section-kicker">COLLABORATION</p>
       <h2 data-en="Good science is built together." data-zh="好的科学研究，来自开放合作。">Good science is built together.</h2>
-      <p data-en="I am open to thoughtful discussions and collaborations across these areas." data-zh="欢迎围绕上述方向开展深入交流与合作。">I am open to thoughtful discussions and collaborations across these areas.</p>
+      <p data-en="I welcome thoughtful discussions and collaborations across AI for Science, scientific software, and computational biology." data-zh="欢迎围绕科学人工智能、科研软件与计算生物学开展深入交流与合作。">I welcome thoughtful discussions and collaborations across AI for Science, scientific software, and computational biology.</p>
       <a class="button button-light" href="/contact"><span data-en="Get in touch" data-zh="联系交流">Get in touch</span><span aria-hidden="true">↗</span></a>
     </div>
   </section>

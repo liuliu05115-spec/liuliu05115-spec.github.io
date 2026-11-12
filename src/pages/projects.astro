@@ -1,85 +1,413 @@
 ---
 import SiteLayout from "../layouts/SiteLayout.astro";
-const projects = [
+
+const groups = [
   {
-    number: "01",
-    category: "AI FOR SCIENCE",
-    title: "State2Combo",
-    subtitle: "Disease-state-guided therapeutic hypothesis generation",
-    description: "A research prototype exploring how disease-state characterization can guide mechanism interpretation, perturbation matching, candidate ranking, and evidence retrieval.",
-    zhTitle: "State2Combo",
-    zhSubtitle: "疾病状态引导的治疗假设生成",
-    zhDescription: "一个科研原型，探索如何通过疾病状态刻画，连接机制解释、扰动匹配、候选排序与证据检索。",
-    tags: ["Scientific Agents", "Therapeutic Design", "Evidence Retrieval"],
-    status: "Prototype",
-    zhStatus: "原型阶段",
+    id: "ai-scientific-software",
+    title: "AI for Science & Scientific Software",
+    zhTitle: "科学人工智能与科研软件",
+    projects: [
+      {
+        id: "state2combo",
+        number: "01",
+        source: "SciencePal AI4Science Hackathon · HKAI-Sci × Tencent",
+        zhSource: "SciencePal AI4Science Hackathon · HKAI-Sci × 腾讯",
+        award: "Hackathon submission · outcome not listed",
+        zhAward: "黑客松参赛作品 · 暂不标注奖项",
+        role: "Research concept, workflow design, and biological evidence evaluation",
+        zhRole: "研究构思、工作流设计与生物学证据评价",
+        materials: [],
+        category: "AI FOR SCIENCE",
+        title: "State2Combo",
+        subtitle: "Human-state-guided therapeutic hypothesis generation",
+        zhTitle: "State2Combo",
+        zhSubtitle: "以人类疾病状态为引导的治疗假设生成",
+        description: "A research prototype that connects human disease-state characterization with mechanism interpretation, drug-perturbation matching, combination ranking, evidence retrieval, and interpretable explanations. The project explores a human-first workflow for therapeutic hypothesis generation rather than presenting an autonomous clinical decision system.",
+        zhDescription: "一个科研原型，将人类疾病状态刻画与机制解释、药物扰动匹配、联合治疗候选排序、证据检索和可解释说明连接起来。项目探索 human-first 的治疗假设生成工作流，并非临床决策系统。",
+        context: "The prototype includes a time-stamped freeze of six candidate predictions before independent mouse-result review, followed by an explicit evaluation workflow.",
+        zhContext: "项目对六项候选预测进行了带时间记录的预先冻结，并在查看独立小鼠实验结果前完成留档，随后开展独立评价。",
+        tags: ["AI for Science", "Scientific Agents", "Therapeutic Design", "Evidence Retrieval"],
+        status: "Research prototype",
+        zhStatus: "科研原型",
+      },
+      {
+        id: "gui-benchmark",
+        number: "02",
+        source: "Ongoing research collaboration · scientific software benchmarking",
+        zhSource: "科研合作研究 · 科研软件基准评测",
+        award: "Research project · no competition award claimed",
+        zhAward: "科研项目 · 不标注竞赛奖项",
+        role: "Task design, experimental evaluation, and benchmark analysis",
+        zhRole: "任务设计、实验评价与基准分析",
+        materials: [],
+        category: "SCIENTIFIC SOFTWARE",
+        title: "GUI vs. Structured Interfaces Benchmark",
+        subtitle: "Understanding when GUI matters for scientific work",
+        zhTitle: "GUI 与结构化接口基准研究",
+        zhSubtitle: "研究 GUI 在科研软件任务中的必要性",
+        description: "A controlled benchmark comparing graphical interaction with structured interfaces across scientific applications. The current task suite covers Cytoscape, PyMOL, and ImageJ, using a shared evaluator and step-budget framework to isolate the effect of the interaction interface.",
+        zhDescription: "一项受控基准研究，对比图形界面交互与结构化接口在科研软件任务中的表现。当前任务集覆盖 Cytoscape、PyMOL 和 ImageJ，并采用统一评价器与步骤预算，尽可能隔离交互界面本身的影响。",
+        context: "The current experiment records 180 trajectories and 2,679 screenshots. A matched-scaffold analysis in Cytoscape indicates that structured interaction can improve task-state success for specific task types.",
+        zhContext: "当前实验记录了 180 条运行轨迹和 2,679 张截图。Cytoscape 的 matched-scaffold 分析显示，在特定任务类型中，结构化交互能够提高任务状态成功率。",
+        tags: ["GUI", "MCP", "Cytoscape", "PyMOL", "ImageJ", "Benchmarking"],
+        status: "Ongoing research",
+        zhStatus: "进行中",
+      },
+    ],
   },
   {
-    number: "02",
-    category: "SCIENTIFIC SOFTWARE",
-    title: "GUI vs. Structured Interfaces Benchmark",
-    subtitle: "Understanding when GUI matters for scientific work",
-    description: "A controlled benchmark study comparing graphical interaction with structured interfaces across scientific software tasks, including Cytoscape, PyMOL, and ImageJ.",
-    zhTitle: "GUI 与结构化接口基准研究",
-    zhSubtitle: "理解 GUI 在科研任务中的必要性",
-    zhDescription: "通过受控基准任务，对比图形交互与结构化接口在科研软件工作流中的表现，涉及 Cytoscape、PyMOL 与 ImageJ。",
-    tags: ["GUI", "MCP", "Benchmarking", "Scientific Software"],
-    status: "Ongoing",
-    zhStatus: "进行中",
+    id: "computational-biology",
+    title: "Computational Biology & Biomedical Research",
+    zhTitle: "计算生物学与生物医学研究",
+    projects: [
+      {
+        id: "morpho-molecular",
+        number: "03",
+        source: "Independent computational pathology research · TCGA-COAD/READ",
+        zhSource: "计算病理研究 · TCGA-COAD/READ 公共数据",
+        award: "Ongoing research · no award claimed",
+        zhAward: "进行中研究 · 暂无奖项",
+        role: "Research question development and computational analysis",
+        zhRole: "研究问题设计与计算分析",
+        materials: [],
+        category: "DIGITAL PATHOLOGY",
+        title: "Morpho-Molecular Decoupling in Colorectal Cancer",
+        subtitle: "Relating histological morphology to molecular state",
+        zhTitle: "结直肠癌中的形态–分子解耦",
+        zhSubtitle: "研究组织学形态与分子状态之间的关系",
+        description: "An ongoing computational pathology study investigating whether stromal abundance and stromal molecular state can diverge in colorectal cancer, and how this relationship is reflected in routine H&E whole-slide images.",
+        zhDescription: "一项进行中的计算病理研究，探索结直肠癌中基质丰度与基质分子状态是否可能发生解耦，以及这种关系如何反映在常规 H&E 全视野病理切片中。",
+        context: "The current public-data analysis uses TCGA-COAD/READ primary tumors and available diagnostic slides; the work remains exploratory and is not yet presented as a validated pathology classifier.",
+        zhContext: "当前公开数据分析基于 TCGA-COAD/READ 原发肿瘤及可获取的诊断切片。研究仍处于探索阶段，尚未将其表述为经过验证的病理分类器。",
+        tags: ["Digital Pathology", "H&E", "TCGA", "Colorectal Cancer", "Stromal Biology"],
+        status: "Ongoing research",
+        zhStatus: "进行中",
+      },
+      {
+        id: "silibinin-crc",
+        number: "04",
+        source: "Undergraduate thesis · Harbin Institute of Technology",
+        zhSource: "哈尔滨工业大学本科毕业设计",
+        award: "Completed undergraduate thesis · defense completed",
+        zhAward: "本科毕业设计 · 已完成结题答辩",
+        role: "Thesis research and integrative bioinformatics analysis",
+        zhRole: "毕业论文研究与整合生物信息学分析",
+        materials: [],
+        category: "UNDERGRADUATE THESIS",
+        title: "Silibinin and Stromal Transcriptional Programs in Colorectal Cancer",
+        subtitle: "An integrative analysis of tumor-associated stromal programs",
+        zhTitle: "水飞蓟宾与结直肠癌间质转录程序",
+        zhSubtitle: "肿瘤相关间质程序的整合分析",
+        description: "An undergraduate thesis integrating bulk transcriptomic cohorts, single-cell evidence, and an AOM/DSS mouse model to investigate stromal-associated transcriptional programs and the potential effects of silibinin.",
+        zhDescription: "本科毕业论文，整合 bulk 转录组队列、单细胞证据与 AOM/DSS 小鼠模型，研究肿瘤相关间质转录程序及水飞蓟宾的潜在作用。",
+        context: "The analysis summarized 37 transcriptional programs across 11 cohorts and examined their cellular context using single-cell data. The thesis was completed and defended in October 2026.",
+        zhContext: "研究整合了 11 个队列中的 37 个转录程序，并利用单细胞数据分析其细胞来源背景。毕业设计于 2026 年 10 月完成结题答辩。",
+        tags: ["Bioinformatics", "Transcriptomics", "Single-cell Analysis", "Colorectal Cancer"],
+        status: "Completed",
+        zhStatus: "已完成",
+      },
+      {
+        id: "pancreatic-taurine",
+        number: "05",
+        source: "Laboratory research experience · pancreatic cancer cell models",
+        zhSource: "实验室科研经历 · 胰腺癌细胞模型",
+        award: "Research experience · no award claimed",
+        zhAward: "科研经历 · 不标注竞赛奖项",
+        role: "Experimental contribution to be specified",
+        zhRole: "个人实验分工待进一步核实",
+        materials: [],
+        category: "EXPERIMENTAL CANCER RESEARCH",
+        title: "Taurine Metabolic Reprogramming and Gemcitabine Resistance",
+        subtitle: "A pancreatic cancer cell-model study",
+        zhTitle: "牛磺酸代谢重编程与吉西他滨耐药",
+        zhSubtitle: "基于胰腺癌细胞模型的研究",
+        description: "A laboratory research project examining taurine metabolism in gemcitabine-resistant pancreatic cancer cells, with a focus on the taurine transporter Slc6a6, the synthesis-related gene Cdo1, and the potential effect of a GES inhibitor.",
+        zhDescription: "一项实验室研究，考察吉西他滨耐药胰腺癌细胞中的牛磺酸代谢变化，重点关注牛磺酸转运基因 Slc6a6、合成相关基因 Cdo1，以及 GES 抑制剂的潜在作用。",
+        context: "Archived experimental records describe KPC/KPC-Gem cell culture, qPCR, MTT, flow-cytometry ROS measurements, and LC–MS metabolomics.",
+        zhContext: "归档实验记录涉及 KPC/KPC-Gem 细胞培养、qPCR、MTT、流式细胞术 ROS 检测及 LC–MS 代谢组学分析。",
+        tags: ["Pancreatic Cancer", "Cell Biology", "Metabolomics", "qPCR", "Flow Cytometry"],
+        status: "Research experience",
+        zhStatus: "科研经历",
+      },
+    ],
   },
   {
-    number: "03",
-    category: "DIGITAL PATHOLOGY",
-    title: "Morpho-Molecular Decoupling",
-    subtitle: "Connecting tissue morphology with molecular programs",
-    description: "An ongoing computational pathology project investigating how stromal abundance and molecular state relate to histological morphology in colorectal cancer.",
-    zhTitle: "形态–分子解耦",
-    zhSubtitle: "连接组织形态与分子程序",
-    zhDescription: "一项进行中的计算病理研究，探索结直肠癌中基质丰度、分子状态与组织学形态之间的关系。",
-    tags: ["Digital Pathology", "Colorectal Cancer", "Transcriptomics"],
-    status: "Ongoing",
-    zhStatus: "进行中",
+    id: "biomedical-engineering",
+    title: "Biomedical Engineering & Robotics",
+    zhTitle: "生物医学工程与机器人",
+    projects: [
+      {
+        id: "yibao",
+        number: "06",
+        source: "National Undergraduate Innovation Training Program · 2024–2025",
+        zhSource: "国家级大学生创新训练计划项目 · 2024–2025",
+        award: "National Third Prize · 8th China University Intelligent Robot Creative Competition; Provincial Second Prize · Heilongjiang Bi Sheng Cup",
+        zhAward: "第八届中国高校智能机器人创意大赛国家级三等奖；黑龙江省“毕昇杯”高校智能机器人创意大赛省级二等奖",
+        role: "Project lead",
+        zhRole: "项目负责人",
+        materials: [],
+        category: "NATIONAL UNDERGRADUATE INNOVATION PROJECT",
+        title: "Yibao — Intelligent Medication-Dispensing Robot",
+        subtitle: "A home-assistance system for medication management",
+        zhTitle: "医宝——智能分药机器人",
+        zhSubtitle: "面向家庭用药管理的辅助系统",
+        description: "A national-level undergraduate innovation project led by Jian Liu, developing a home-assistance robot integrating scheduled medication dispensing, health monitoring, environmental disinfection, and a companion mobile interface.",
+        zhDescription: "由刘健担任项目负责人的国家级大学生创新训练计划项目，开发集定时分药、健康监测、环境消毒和移动端交互于一体的家庭辅助机器人。",
+        context: "The project ran from September 2024 to September 2025. The team received a National Third Prize in the 8th China University Intelligent Robot Creative Competition and a provincial Second Prize in the Heilongjiang Bi Sheng Cup university robotics competition.",
+        zhContext: "项目执行时间为 2024 年 9 月至 2025 年 9 月。团队获得第八届中国高校智能机器人创意大赛国家级三等奖，以及黑龙江省“毕昇杯”高校智能机器人创意大赛省级二等奖。",
+        tags: ["Project Leadership", "Robotics", "Medication Safety", "PWA", "BLE", "AI Agent"],
+        status: "Completed · Project lead",
+        zhStatus: "已完成 · 项目负责人",
+      },
+      {
+        id: "eeg-emotion",
+        number: "07",
+        source: "11th National Biomedical Engineering Innovation Design Competition",
+        zhSource: "第十一届全国大学生生物医学工程创新设计大赛",
+        award: "National Second Prize",
+        zhAward: "国家级二等奖",
+        role: "Team project · individual contribution to be confirmed",
+        zhRole: "团队项目 · 个人具体分工待确认",
+        materials: [],
+        category: "BIOMEDICAL SIGNAL PROCESSING",
+        title: "Cross-Subject EEG Emotion Recognition",
+        subtitle: "An EA-RNC framework with subject-independent evaluation",
+        zhTitle: "跨被试 EEG 情绪识别",
+        zhSubtitle: "基于 EA-RNC 框架的被试独立评估",
+        description: "A biomedical signal-analysis project developing an EEG emotion-recognition framework with Euclidean alignment, robust feature processing, and probability calibration. Evaluation used a strict leave-one-subject-out protocol.",
+        zhDescription: "一项生物医学信号分析项目，构建结合欧氏对齐、稳健特征处理与概率校准的 EEG 情绪识别框架，并采用严格的留一被试交叉验证方案。",
+        context: "The report describes 60 participants and 2,400 windows. The reported evaluation achieved 0.7354 overall accuracy, 0.7392 F1, 0.7941 AUC, and 0.0441 expected calibration error. The project received the National Second Prize in the 11th National Biomedical Engineering Innovation Design Competition.",
+        zhContext: "报告包含 60 名被试和 2,400 个窗口。报告结果为总体准确率 0.7354、F1 0.7392、AUC 0.7941、期望校准误差 0.0441。项目获得第十一届全国大学生生物医学工程创新设计大赛国家级二等奖。",
+        tags: ["EEG", "Signal Processing", "Machine Learning", "LOSO", "Calibration"],
+        status: "Completed · Award-winning project",
+        zhStatus: "已完成 · 获奖项目",
+      },
+      {
+        id: "mambasta",
+        number: "08",
+        source: "Undergraduate Innovation Training Program",
+        zhSource: "大学生创新训练计划项目",
+        award: "Project completed · no specific award claimed",
+        zhAward: "项目已结题 · 暂不标注具体奖项",
+        role: "Project participation · contribution details to be confirmed",
+        zhRole: "项目参与 · 个人分工待确认",
+        materials: [],
+        category: "UNDERGRADUATE INNOVATION PROJECT",
+        title: "MambaSTA: Multimodal EEG–fNIRS Modeling",
+        subtitle: "A multimodal neuro-signal analysis project",
+        zhTitle: "MambaSTA：EEG–fNIRS 多模态建模",
+        zhSubtitle: "多模态神经信号分析项目",
+        description: "An undergraduate innovation project exploring multimodal EEG–fNIRS signal modeling with a Mamba-based temporal architecture. The project was completed and presented in a project defense.",
+        zhDescription: "一项本科生创新训练项目，探索基于 Mamba 时序架构的 EEG–fNIRS 多模态信号建模。项目已完成并进行结题答辩。",
+        context: "The archived defense material records the project presentation and its recognition in the 11th National Biomedical Engineering Innovation Design Competition.",
+        zhContext: "归档答辩材料记录了项目汇报及其参加第十一届全国大学生生物医学工程创新设计大赛的相关成果。",
+        tags: ["EEG", "fNIRS", "Mamba", "Multimodal Learning"],
+        status: "Completed",
+        zhStatus: "已完成",
+      },
+      {
+        id: "magnetic-nanorobot",
+        number: "09",
+        source: "9th National Biomedical Engineering Innovation Design Competition · 2024",
+        zhSource: "第九届全国大学生生物医学工程创新设计竞赛 · 2024",
+        award: "Third Prize · team award",
+        zhAward: "三等奖 · 团队奖项",
+        role: "Team member · individual contribution to be confirmed",
+        zhRole: "团队成员 · 个人具体分工待确认",
+        materials: [],
+        category: "BIOMEDICAL ENGINEERING",
+        title: "Magnetic Swimming Nanorobots for Targeted Thrombolysis",
+        subtitle: "An injectable, drug-loaded magnetic nanorobot concept",
+        zhTitle: "面向血栓靶向治疗的磁性游动纳米机器人",
+        zhSubtitle: "可注射载药磁驱纳米机器人设计",
+        description: "A team research project on chemically assembled, drug-loaded magnetic swimming nanorobots designed for active targeting in thrombus treatment.",
+        zhDescription: "一项团队研究项目，通过化学可控组装构建载药磁驱游动纳米机器人，探索其在血栓治疗中的主动靶向应用。",
+        context: "The 2024 competition report describes in-vitro thrombus-model and rat-model evaluation and reports a 10-fold increase in thrombolysis efficiency. The project received Third Prize in the 9th National Biomedical Engineering Innovation Design Competition.",
+        zhContext: "2024 年竞赛报告描述了体外血栓模型与大鼠模型评价，并报告溶栓效率提高 10 倍。项目获得第九届全国大学生生物医学工程创新设计竞赛三等奖。",
+        tags: ["Nanorobotics", "Magnetic Actuation", "Drug Delivery", "Thrombolysis"],
+        status: "Completed · Team project",
+        zhStatus: "已完成 · 团队项目",
+      },
+      {
+        id: "zhiban-robot",
+        number: "10",
+        source: "Collaborative robotics project · ROS 2 and RGB-D perception",
+        zhSource: "机器人协作项目 · ROS 2 与 RGB-D 感知",
+        award: "Team award details pending verification",
+        zhAward: "团队奖项信息待核实",
+        role: "Collaborative project · individual contribution to be confirmed",
+        zhRole: "团队协作项目 · 个人具体分工待确认",
+        materials: [],
+        category: "ROBOTICS & HUMAN–ROBOT INTERACTION",
+        title: "Zhiban — ROS 2 Infant-Care Robot",
+        subtitle: "A multi-sensor system for proactive child safety",
+        zhTitle: "智伴——基于 ROS 2 的婴幼儿智能陪护机器人",
+        zhSubtitle: "面向儿童主动安全的多传感器系统",
+        description: "A collaborative engineering project documented around a ROS 2 multi-machine architecture, RGB-D perception, child tracking, fall detection, dynamic risk assessment, adaptive following, and caregiver feedback.",
+        zhDescription: "一项协作式工程项目，围绕 ROS 2 多机协同架构、RGB-D 感知、儿童跟随、摔倒检测、动态风险评估、自适应跟随与家长端反馈展开。",
+        context: "The archived project materials describe an integrated perception–risk assessment–action workflow. Public-facing individual contribution details can be added once the team role breakdown is finalized.",
+        zhContext: "归档项目材料展示了感知、风险评估与执行相结合的工作流。待团队分工进一步核实后，可补充个人具体贡献。",
+        tags: ["ROS 2", "RGB-D", "Computer Vision", "Risk Assessment", "Robotics"],
+        status: "Collaborative project",
+        zhStatus: "团队协作项目",
+      },
+    ],
   },
   {
-    number: "04",
-    category: "COMPUTATIONAL ONCOLOGY",
-    title: "Silibinin and Stromal Transcriptional Programs",
-    subtitle: "An integrative bioinformatics study in colorectal cancer",
-    description: "An undergraduate research project integrating bulk transcriptomics, single-cell evidence, and an AOM/DSS mouse model to investigate stromal-associated transcriptional programs.",
-    zhTitle: "水飞蓟宾与肿瘤间质转录程序",
-    zhSubtitle: "结直肠癌整合生物信息学研究",
-    zhDescription: "本科科研项目，整合 bulk 转录组、单细胞证据与 AOM/DSS 小鼠模型，研究肿瘤相关间质转录程序。",
-    tags: ["Bioinformatics", "Single-cell Analysis", "Transcriptomics"],
-    status: "Completed",
-    zhStatus: "已完成",
+    id: "modeling-data-science",
+    title: "Data Science & Mathematical Modeling",
+    zhTitle: "数据科学与数学建模",
+    projects: [
+      {
+        id: "mcm-icm",
+        number: "11",
+        source: "2025 Mathematical Contest in Modeling / Interdisciplinary Contest in Modeling · Problem F",
+        zhSource: "2025 年美国大学生数学建模竞赛（MCM/ICM）· F 题",
+        award: "Honorable Mention (H Award) · Team 2514199",
+        zhAward: "Honorable Mention（H 奖）· 团队编号 2514199",
+        role: "Team modeling project · individual contribution to be confirmed",
+        zhRole: "团队建模项目 · 个人具体分工待确认",
+        materials: [],
+        category: "INTERNATIONAL MODELING COMPETITION",
+        title: "MCM/ICM 2025 — Problem F",
+        subtitle: "A team modeling project on cybercrime-related questions",
+        zhTitle: "2025 年美国大学生数学建模竞赛——F 题",
+        zhSubtitle: "围绕网络犯罪相关问题的团队建模研究",
+        description: "A team-based mathematical modeling project addressing the 2025 Mathematical Contest in Modeling / Interdisciplinary Contest in Modeling Problem F.",
+        zhDescription: "一项团队数学建模项目，围绕 2025 年美国大学生数学建模竞赛 / 跨学科建模竞赛 F 题开展研究。",
+        context: "The team entry (team number 2514199) received an Honorable Mention (H Award).",
+        zhContext: "团队参赛编号为 2514199，获得 Honorable Mention（H 奖）。",
+        tags: ["Mathematical Modeling", "Data Analysis", "MCM/ICM"],
+        status: "Completed · H Award",
+        zhStatus: "已完成 · H 奖",
+      },
+      {
+        id: "national-mcm",
+        number: "12",
+        source: "National Undergraduate Mathematical Modeling Contest",
+        zhSource: "全国大学生数学建模竞赛",
+        award: "Heilongjiang Provincial First Prize",
+        zhAward: "黑龙江省级一等奖",
+        role: "Team modeling project · individual contribution to be confirmed",
+        zhRole: "团队建模项目 · 个人具体分工待确认",
+        materials: [],
+        category: "NATIONAL MATHEMATICAL MODELING",
+        title: "Interference-Based Epitaxial Layer Thickness Inversion",
+        subtitle: "Modeling SiC and silicon wafer thickness from infrared spectra",
+        zhTitle: "基于干涉模型的外延层厚度反演",
+        zhSubtitle: "利用红外光谱对碳化硅与硅晶圆厚度建模",
+        description: "A mathematical modeling project developing dual-beam and multi-beam interference models for epitaxial-layer thickness inversion, combining dispersion modeling, multi-angle optimization, and uncertainty assessment.",
+        zhDescription: "一项数学建模研究，构建双光束与多光束干涉模型进行外延层厚度反演，并结合色散建模、多角度联合优化与不确定度评估。",
+        context: "The project received a Heilongjiang Provincial First Prize in the National Undergraduate Mathematical Modeling Contest.",
+        zhContext: "项目获得全国大学生数学建模竞赛黑龙江省级一等奖。",
+        tags: ["Mathematical Modeling", "Interference Optics", "Optimization", "Uncertainty"],
+        status: "Completed · Provincial First Prize",
+        zhStatus: "已完成 · 省级一等奖",
+      },
+      {
+        id: "zhengda-cup",
+        number: "13",
+        source: "Zhengda Cup Market Research and Analysis Competition",
+        zhSource: "正大杯市场调查与分析大赛",
+        award: "Provincial First Prize · National Second Prize",
+        zhAward: "省级一等奖 · 国家级二等奖",
+        role: "Team research project · individual contribution to be confirmed",
+        zhRole: "团队调研项目 · 个人具体分工待确认",
+        materials: [],
+        category: "MARKET RESEARCH & DATA ANALYTICS",
+        title: "Zhengda Cup — Micro-Wellness Snacks in Heilongjiang",
+        subtitle: "Market conditions and consumer purchase intentions",
+        zhTitle: "正大杯——黑龙江省微养生零食市场研究",
+        zhSubtitle: "市场现状与消费者购买意愿分析",
+        description: "A market-research project examining the emerging micro-wellness snack category in Heilongjiang. The study combines questionnaire surveys, interviews, market observation, web-based data collection, text analysis, and quantitative modeling to understand consumer needs and purchase intentions.",
+        zhDescription: "一项市场调查研究，关注黑龙江省微养生零食这一新兴品类，结合问卷调查、深度访谈、市场观察、网络数据采集、文本分析与定量建模，研究消费者需求和购买意愿。",
+        context: "The report records 947 questionnaires distributed, 758 valid responses, 15 interviews, and field research across 10 counties or districts and 12 supermarkets. The team received a Provincial First Prize and a National Second Prize in the Zhengda Cup Market Research and Analysis Competition.",
+        zhContext: "报告记录发放问卷 947 份、有效问卷 758 份，开展 15 次访谈，并覆盖 10 个县区和 12 家超市。团队在正大杯市场调查与分析大赛中获得省级一等奖和国家级二等奖。",
+        tags: ["Market Research", "Survey Design", "Statistical Analysis", "Consumer Behavior"],
+        status: "Completed · Award-winning project",
+        zhStatus: "已完成 · 获奖项目",
+      },
+    ],
   },
 ];
 ---
-<SiteLayout title="Projects | Jian Liu" description="Selected research and technical projects by Jian Liu." activePath="/projects">
+<SiteLayout title="Projects | Jian Liu" description="Selected research, engineering, and data-science projects by Jian Liu." activePath="/projects">
   <section class="page-hero">
     <div class="container">
       <p class="section-kicker">PROJECTS / 03</p>
-      <h1 data-en="Selected projects" data-zh="代表性项目">Selected projects</h1>
-      <p class="page-lead" data-en="A selection of research prototypes and ongoing work spanning scientific AI, software evaluation, computational biology, and digital pathology." data-zh="展示科学人工智能、科研软件评测、计算生物学与数字病理方向的研究原型及持续工作。">A selection of research prototypes and ongoing work spanning scientific AI, software evaluation, computational biology, and digital pathology.</p>
+      <h1 data-en="Projects & portfolio" data-zh="项目与作品集">Projects & portfolio</h1>
+      <p class="page-lead" data-en="A structured portfolio of research, competitions, and engineering projects. Each entry highlights its project source, award or outcome, a concise introduction, my role, and supporting materials where public release is approved." data-zh="以作品集形式整理科研、竞赛与工程项目。每项经历均展示项目来源、获奖或成果、项目简介、个人职责，以及经审核可公开的支撑材料。">A structured portfolio of research, competitions, and engineering projects. Each entry highlights its project source, award or outcome, a concise introduction, my role, and supporting materials where public release is approved.</p>
+      <div class="portfolio-summary">
+        <span><strong>13</strong><small data-en="Selected projects" data-zh="项代表项目">Selected projects</small></span>
+        <span><strong>04</strong><small data-en="Research & project areas" data-zh="大项目类别">Research & project areas</small></span>
+        <span><strong>PDF</strong><small data-en="Reports & project materials" data-zh="报告与项目材料">Reports & project materials</small></span>
+      </div>
     </div>
   </section>
 
   <section class="section-block page-content">
-    <div class="container project-list">
-      {projects.map((project) => (
-        <article class="project-row">
-          <div class="project-index">{project.number}</div>
-          <div class="project-main">
-            <div class="project-meta">
-              <span class="section-kicker">{project.category}</span>
-              <span class="project-status" data-en={project.status} data-zh={project.zhStatus}>{project.status}</span>
-            </div>
-            <h2 data-en={project.title} data-zh={project.zhTitle}>{project.title}</h2>
-            <p class="project-subtitle" data-en={project.subtitle} data-zh={project.zhSubtitle}>{project.subtitle}</p>
-            <p class="project-description" data-en={project.description} data-zh={project.zhDescription}>{project.description}</p>
-            <div class="tag-row">{project.tags.map((tag) => <span>{tag}</span>)}</div>
+    <div class="container project-groups">
+      {groups.map((group) => (
+        <section class="project-group" id={group.id}>
+          <div class="project-group-heading">
+            <p class="section-kicker">SELECTED WORK</p>
+            <h2 data-en={group.title} data-zh={group.zhTitle}>{group.title}</h2>
           </div>
-        </article>
+          <div class="portfolio-grid">
+            {group.projects.map((project) => (
+              <article class="portfolio-card" id={project.id}>
+                <div class="portfolio-card-top">
+                  <span class="portfolio-number">{project.number}</span>
+                  <span class="project-status" data-en={project.status} data-zh={project.zhStatus}>{project.status}</span>
+                </div>
+                <p class="portfolio-category">{project.category}</p>
+                <h3 data-en={project.title} data-zh={project.zhTitle}>{project.title}</h3>
+                <p class="project-subtitle" data-en={project.subtitle} data-zh={project.zhSubtitle}>{project.subtitle}</p>
+
+                <div class="portfolio-facts">
+                  <div class="portfolio-fact">
+                    <span class="portfolio-label" data-en="COMPETITION / PROJECT" data-zh="比赛 / 项目来源">COMPETITION / PROJECT</span>
+                    <p data-en={project.source} data-zh={project.zhSource}>{project.source}</p>
+                  </div>
+                  <div class="portfolio-fact">
+                    <span class="portfolio-label" data-en="AWARD / OUTCOME" data-zh="获得奖项 / 项目成果">AWARD / OUTCOME</span>
+                    <p class="portfolio-award" data-en={project.award} data-zh={project.zhAward}>{project.award}</p>
+                  </div>
+                </div>
+
+                <div class="portfolio-description">
+                  <span class="portfolio-label" data-en="PROJECT OVERVIEW" data-zh="项目简介">PROJECT OVERVIEW</span>
+                  <p data-en={project.description} data-zh={project.zhDescription}>{project.description}</p>
+                  <p class="portfolio-context" data-en={project.context} data-zh={project.zhContext}>{project.context}</p>
+                </div>
+
+                <div class="portfolio-contribution">
+                  <span class="portfolio-label" data-en="MY CONTRIBUTION" data-zh="个人职责">MY CONTRIBUTION</span>
+                  <p data-en={project.role} data-zh={project.zhRole}>{project.role}</p>
+                </div>
+
+                <div class="portfolio-materials">
+                  <span class="portfolio-label" data-en="PROJECT MATERIALS" data-zh="项目材料">PROJECT MATERIALS</span>
+                  {project.materials.length > 0 ? (
+                    <div class="portfolio-material-list">
+                      {project.materials.map((material) => (
+                        <a class="portfolio-material-link" href={material.href} target="_blank" rel="noreferrer">
+                          <span class="material-file-icon">PDF</span>
+                          <span class="material-file-name">{material.label}</span>
+                          <span class="material-open" aria-hidden="true">↗</span>
+                        </a>
+                      ))}
+                    </div>
+                  ) : (
+                    <p class="portfolio-material-pending" data-en="PDF materials are being reviewed for personal information, team details, and public-release permissions before upload." data-zh="PDF 原件正在进行个人信息、团队信息及公开权限检查，审核通过后再上传。">PDF materials are being reviewed for personal information, team details, and public-release permissions before upload.</p>
+                  )}
+                </div>
+
+                <div class="tag-row">{project.tags.map((tag) => <span>{tag}</span>)}</div>
+              </article>
+            ))}
+          </div>
+        </section>
       ))}
     </div>
   </section>
